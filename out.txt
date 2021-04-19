@@ -1,0 +1,29 @@
+%Starting Python module....
+%your company is named:  "My company"
+%You have the following buidnings "my bulding"
+%  In that building you have the following: "my productionline"
+%    Here you have:  "my workbench"
+%Assuming this is your workbench...
+%====================================
+\node [block, name=Grouping1] (Grouping1) {Grouping1};
+\node [block,below of=Grouping1] (Sw1) {Sw1};
+\draw [->] (Grouping1) -- (Sw1);
+\node [block,below of=Sw1] (OPs1) {OPs1};
+\draw [->] (Sw1) -- (OPs1);
+\node [block,below of=OPs1] (OPs2) {OPs2};
+\draw [->] (OPs1) -- (OPs2);
+\node [block,right of=Grouping1] (OP1) {OP1};
+\draw [->] (Grouping1) -- (OP1);
+\node [block,right of=OP1] (Sw2) {Sw2};
+\draw [->] (OP1) -- (Sw2);
+\node [block,right of=Sw2] (Grouping2) {Grouping2};
+\draw [->] (Sw2) -- (Grouping2);
+\node [block,below of=Grouping2] (OPs3) {OPs3};
+\draw [->] (Grouping2) -- (OPs3);
+\node [block,below of=OPs3] (Sw2) {Sw2};
+\draw [->] (OPs3) -- (Sw2);
+\node [block,below of=Sw2] (OPs4) {OPs4};
+\draw [->] (Sw2) -- (OPs4);
+\node [block,right of=Grouping2] (OP2) {OP2};
+\draw [->] (Grouping2) -- (OP2);
+%  In that building you have the following: None

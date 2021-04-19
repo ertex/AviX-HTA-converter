@@ -1,5 +1,10 @@
 # AviX-HTA-converter
 A script to generate a HTA graph in LaTeX Tikiz from a AviX savefile
+The script only generates the layout and name of the blocks and not the look/format of the blocks all is generated as basic as possible.
+See Example files for clarification
+
+# Issues
+Names containing special LaTeX characters cause problems, eg. \%_$]()& etc 
 
 # Usage
 
