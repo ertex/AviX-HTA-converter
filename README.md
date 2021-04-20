@@ -5,6 +5,8 @@ See Example files for clarification
 
 # Issues
 Names containing special LaTeX characters cause problems, eg. \%_$]()& etc 
+Using Multiple unconnected lines can cause them to overlap, they are sepperated by a sepperatior in output though.
+Operations with identical names cause trouble for the Tikz builder as the ID of the block is generated the same as the name.
 
 # Usage
 

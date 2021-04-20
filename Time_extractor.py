@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as ET
 print("%Starting Python module....")
 
+#NOTE this is just a slightly modified version of the default script. so most of the things is just commented out with some bodge ontop
 
 root_node = ET.parse("tmp/avix_out.xml").getroot()
 #print(root_node)
@@ -48,12 +49,12 @@ for child in root_node:
 
 
 
-							for subop in operation:
+							for subop in operation: #This is a operation in a folder under a workbench
 								if(subop.get('i18nName')):
 									subop_name = subop.get('i18nName').strip('\"')
 									#print(" -- ", subop.get('i18nName'))
 									print(subop.get('i18nName'))
-									for subsubop in subop:
+									for subsubop in subop: #since the timestudy has mulitple rows the individual rows are new entries and need to be itterated though
 										#print(subsubop.attrib)
 										if(subsubop.get('startTime')):
 											print(-eval(subsubop.get('startTime'))+eval(subsubop.get('endTime')))
